@@ -13,15 +13,12 @@
 }
 .navbar li {
   display: inline-block;
-  margin: 5px 10px;
+  margin: 5px 20px;
   position: relative;
   margin-left: 3vw;
 }
 .nav-item a {
   color: white;
   text-decoration: none;
-
 }
-#signin {
 
-}
