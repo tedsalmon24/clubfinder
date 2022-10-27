@@ -1,0 +1,99 @@
+  /* Headshot */
+  .headshot {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 8px 30px 10px grey;
+  }
+  /* Headshot Banner Section */
+.container h1{
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--qc-blue);
+  font-size: 25px;
+  padding-bottom: 10px;
+  margin-top: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 320;
+}
+.container h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-indent: 100px;
+  }
+.cen{
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+.service {
+  display: inline-block;
+  margin: 0 -2px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.service i{
+  color: #3498db;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.service h2{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+.service p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-indent: 50px;
+}
+/* LinkedIn Overlay */
+.wrap {
+  height: auto;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+.overlay > i {
+  color: white;
+  font-size: 75px;
+  font-weight: 400;
+}
+.text {
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.overlay {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  padding-top: 110px;
+  transition: .3s ease;
+  background-color: grey;
+  width: 300px;
+  height: 190px;
+  border-radius: 50%;
+  opacity: 0;
+}
+.wrap:hover .overlay {
+  opacity: .9;
+}
+.wrapper {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+/* END BIO BANNER */
+
+
