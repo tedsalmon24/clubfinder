@@ -1,114 +1,136 @@
-
 <!DOCTYPE html>
 <!-- === Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- ===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="signin.component.css">
-         
+    <link rel="stylesheet" href="signin.component.css" />
+
     <!--<title>Login & Registration Form</title>-->
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="container">
-                
-        <div class="forms">
-            <!-- Login Form -->
-            <div class="form login">
-                <span class="title">Login</span>
+      <div class="forms">
+        <!-- Login Form -->
+        <div class="form login">
+          <span class="title">Login</span>
 
-                <div id="message_container" >
-                    <div id="login_msg" class="info">Info message</div>
-                   
-                </div>   
-             
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" id="username" placeholder="Enter username" required>
-                        <i class="uil uil-envelope icon"></i>
-                    </div>
+          <div id="message_container">
+            <div id="login_msg" class="info">Info message</div>
+          </div>
 
-                    
-                    <div class="input-field">
-                        <input type="password" id="userpassword" class="password" placeholder="Enter your password" required>
-                        <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
-                    </div>
-
-                    <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
-                            <label for="logCheck" class="text">Remember me</label>
-                        </div>
-                        
-                        <a href="#" class="text">Forgot password?</a>
-                    </div>
-
-                    <div class="input-field button">
-                        <input type="button" value="Login" onclick="check_info();">
-                    </div>
-                </form>
-
-                <div class="login-signup">
-                    <span class="text">Not a member?
-                        <a href="#" class="text signup-link">Signup Now</a>
-                    </span>
-                </div>
+          <form action="#">
+            <div class="input-field">
+              <input type="text" id="username" placeholder="Username" required />
+              <i class="uil uil-envelope icon"></i>
             </div>
 
-            <!-- Registration Form -->
-            <div class="form signup">
-                <span class="title">Registration</span>
+            <div class="input-field">
+              <input
+                type="password"
+                id="userpassword"
+                class="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
 
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your name" required>
-                        <i class="uil uil-user"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
-                        <i class="uil uil-envelope icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" class="password" id="password" placeholder="Create a password" onkeyup='check();' required>
-                        <i class="uil uil-lock icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" class="password" id="confirm_password" placeholder="Confirm a password" onkeyup='check();' required>
-                        <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
-                    </div>
-                    
-                    <span id='message'></span>
-                    <!-- <div class="checkbox-text">
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck" />
+                <label for="logCheck" class="text">Remember me</label>
+              </div>
+
+              <a href="#" class="text">Forgot password?</a>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Login" onclick="check_info();" />
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Not a member?
+              <a href="#" class="text signup-link">Signup Now</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form signup">
+          <span class="title">Registration</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Enter your name" required />
+              <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="Enter your email" required />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                id="password"
+                placeholder="Create a password"
+                onkeyup="check();"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                id="confirm_password"
+                placeholder="Confirm a password"
+                onkeyup="check();"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <span id="message"></span>
+            <!-- <div class="checkbox-text">
                         <div class="checkbox-content">
                             <input type="checkbox" id="termCon">
                             <label for="termCon" class="text">I accepted all terms and conditions</label>
                         </div>
                     </div> -->
 
-                    <div class="input-field button">
-                        <input type="submit" id="submit_button" value="Signup" onkeyup='check();'>
-                    </div>
-                </form>
-
-                <div class="login-signup">
-                    <span class="text">Already a member?
-                        <a href="#" class="text login-link">Login Now</a>
-                    </span>
-                </div>
+            <div class="input-field button">
+              <input
+                type="submit"
+                id="submit_button"
+                value="Signup"
+                onkeyup="check();"
+              />
             </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Already a member?
+              <a href="#" class="text login-link">Login Now</a>
+            </span>
+          </div>
         </div>
+      </div>
     </div>
 
-    <script src="signin.component.ts"></script>
-
-</body>
+    <!--<script src="signin.js"></script>-->
+  </body>
 </html>
