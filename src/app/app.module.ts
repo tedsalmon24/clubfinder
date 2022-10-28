@@ -8,6 +8,7 @@ import { MatchComponent } from './match/match.component';
 import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
+import { MatchedComponent } from './matched/matched.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HomeComponent } from './home/home.component';
     ChatComponent,
     SigninComponent,
     HomeComponent,
+    MatchedComponent,
   ],
   imports: [
     BrowserModule,

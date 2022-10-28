@@ -6,6 +6,7 @@ import { MatchComponent } from './match/match.component';
 import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
+import { MatchedComponent } from './matched/matched.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'match', component: MatchComponent},
   {path: 'chat', component: ChatComponent},
   {path: 'signin', component: SigninComponent},
+  {path: 'matched', component: MatchedComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
