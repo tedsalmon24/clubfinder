@@ -10,6 +10,8 @@ import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { MatchedComponent } from './matched/matched.component';
 import { SettingsComponent } from './settings/settings.component';
+import { Matched2Component } from './matched2/matched2.component';
+import { Matched3Component } from './matched3/matched3.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { SettingsComponent } from './settings/settings.component';
     HomeComponent,
     MatchedComponent,
     SettingsComponent,
+    Matched2Component,
+    Matched3Component,
   ],
   imports: [
     BrowserModule,

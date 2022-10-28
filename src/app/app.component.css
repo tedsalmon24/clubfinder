@@ -21,4 +21,7 @@
   color: white;
   text-decoration: none;
 }
+.nav-item i {
+  font-size: 30px;
 
+}
