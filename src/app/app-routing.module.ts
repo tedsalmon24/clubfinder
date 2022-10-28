@@ -5,8 +5,10 @@ import { OrganizationsComponent } from './organizations/organizations.component'
 import { MatchComponent } from './match/match.component';
 import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
+import { HomeComponent } from './home/home.component';
+
 const routes: Routes = [
-  {path: '', component: ProfileComponent},
+  {path: '', component: HomeComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'organizations', component: OrganizationsComponent},
   {path: 'match', component: MatchComponent},

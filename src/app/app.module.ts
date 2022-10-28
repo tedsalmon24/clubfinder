@@ -7,6 +7,7 @@ import { OrganizationsComponent } from './organizations/organizations.component'
 import { MatchComponent } from './match/match.component';
 import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SigninComponent } from './signin/signin.component';
     MatchComponent,
     ChatComponent,
     SigninComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
