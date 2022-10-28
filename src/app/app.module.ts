@@ -9,6 +9,7 @@ import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { MatchedComponent } from './matched/matched.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MatchedComponent } from './matched/matched.component';
     SigninComponent,
     HomeComponent,
     MatchedComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
