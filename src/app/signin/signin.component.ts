@@ -20,7 +20,7 @@ export class SigninComponent implements OnInit {
     pwShowHide.forEach(eyeIcon => {
       eyeIcon.addEventListener("click", () => {
 
-        //   js code to show/hide password and change icon
+        //  code to show/hide password and change icon
         pwFields.forEach(pwField => {
           if (pwField.type == "password") {
             pwField.type = "text";
@@ -85,7 +85,7 @@ export class SigninComponent implements OnInit {
       }
     };
 
-    // js code to appear signup and login form
+    // code to appear signup and login form
     signUp?.addEventListener("click", () => {
     container?.classList.add("active");
     });
