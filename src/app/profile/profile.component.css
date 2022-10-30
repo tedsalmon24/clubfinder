@@ -1,9 +1,11 @@
 
 /* Profile Banner */
 h1, h2, h3, h4, h5 {
-  border-bottom: 1px solid #ccc;
-  color: #3F51B5;
-  padding-bottom: 8px
+  border: 1px solid #DFDFDF;
+  border-radius: 25px 25px;
+  color: #60847c;
+  padding-bottom: 8px;
+  background-color: #EFEFEF;
 }
 .container {
   margin: auto;
@@ -43,7 +45,7 @@ img {
   cursor: pointer;
   padding-top: 110px;
   transition: .3s ease;
-  background-color: grey;
+  background-color: #60847c;
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -71,4 +73,7 @@ img {
 
 .bio, .goals {
 height: 350px;
+}
+.bio > h1, .goals > h1, .personality > h1,.brands > h1 {
+  text-align: center;
 }
