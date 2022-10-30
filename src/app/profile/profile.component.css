@@ -45,7 +45,7 @@ img {
   transition: .3s ease;
   background-color: grey;
   width: 300px;
-  height: 190px;
+  height: 300px;
   border-radius: 50%;
   opacity: 0;
 }
@@ -68,3 +68,7 @@ img {
   clear: both;
 }
 /* End grid format */
+
+.bio, .goals {
+height: 350px;
+}
