@@ -16,6 +16,7 @@
   margin: 5px 20px;
   position: relative;
   margin-left: 3vw;
+  text-align: right;
 }
 .nav-item a {
   color: white;
@@ -24,4 +25,7 @@
 .nav-item i {
   font-size: 30px;
 
+}
+.nav-right {
+  position: relative;
 }
