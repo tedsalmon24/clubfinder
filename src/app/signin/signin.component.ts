@@ -7,11 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
+  isSignupHide = true;
+  conPasswordType = "password";
+  eyeIcon = 'uil-eye-slash';
+  isPasswordHide = true;
+  sigin="sigin-link";
+  signup="signup-link"
+
   constructor() { }
 
   ngOnInit(): void {
+  
+  }
 
-    const container = document.querySelector(".container"),
+  showPassword(isVisible:any){
+    if(isVisible){
+    this.conPasswordType = 'text';
+    this.eyeIcon = 'uil-eye';
+    this.isPasswordHide = false;
+    } else{
+      this.conPasswordType = 'password';
+      this.eyeIcon = 'uil-eye-slash';
+      this.isPasswordHide = true;
+    }
+  }
+
+}
+
+   /**  const container = document.querySelector(".container"),
       pwShowHide = document.querySelectorAll(".showHidePw"),
       pwFields: NodeListOf<HTMLInputElement> = document.querySelectorAll(".password"),
       signUp = document.querySelector(".signup-link"),
@@ -20,7 +43,8 @@ export class SigninComponent implements OnInit {
     pwShowHide.forEach(eyeIcon => {
       eyeIcon.addEventListener("click", () => {
 
-        //  code to show/hide password and change icon
+
+          }        //  code to show/hide password and change icon
         pwFields.forEach(pwField => {
           if (pwField.type == "password") {
             pwField.type = "text";
@@ -34,7 +58,6 @@ export class SigninComponent implements OnInit {
             pwShowHide.forEach(icon => {
               icon.classList.replace("uil-eye", "uil-eye-slash");
             })
-          }
         })
       })
     })
@@ -93,11 +116,7 @@ export class SigninComponent implements OnInit {
       container?.classList.remove("active");
     });
 
-
-  }
-
-
-}
+*/
 
 
 

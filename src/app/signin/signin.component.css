@@ -11,20 +11,24 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:#fff;
+    /**height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
     --color-primary:#60847c;
     --color-primary-dark:#395640;
     --color-secondary:rgb(16, 22, 123);
-    --border-radius: 4px;
-    --border-radius: 4px;
+    --border-radius: 4px;*/
 }
 .container{
     position: relative;
-    max-width: 430px;
+    max-width: 500px;
     width: 100%;
     background: #fff;
-    border-radius: var(--border-radius);
-    box-shadow:  0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin: 0 20px;
 }
@@ -47,7 +51,7 @@ body{
     transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 .container .signup{
-    opacity: 0;
+
     transition: opacity 0.09s ease;
 }
 .container.active .signup{
@@ -74,7 +78,7 @@ body{
 }
 .form .input-field{
     position: relative;
-    height: 50px;
+    height: 40px;
     width: 100%;
     margin-top: 30px;
 }
@@ -131,12 +135,11 @@ body{
     font-size: 14px;
 }
 .form a.text{
-    color: var(--color-primary);
+    color: rgb(16, 22, 123);
     text-decoration: none;
-}
-.form a:hover{
     text-decoration: underline;
 }
+
 .form .button{
     margin-top: 35px;
 }
@@ -146,13 +149,13 @@ body{
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
-    border-radius: 6px;
+    border-radius: 30px;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
     background-color: var(--color-primary);
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-.button input:hover{
-    background-color:  var(--color-primary-dark);
+
 }
 
 .form .login-signup{
@@ -160,6 +163,22 @@ body{
     text-align: center;
 }
 
+.form .btn {
+    border:1px solid;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #60847c;;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.form .btn:hover{
+    background-color:#395640;
+}
 
 /* error message */
 #message_container{
