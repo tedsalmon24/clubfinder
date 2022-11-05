@@ -37,7 +37,7 @@
 
                     
                     <div class="input-field">
-                        <input type="password" id="userpassword" class="password" placeholder="Enter your password" required>
+                        <input type="{{conPasswordType}}" id="userpassword" class="password" placeholder="Enter your password" required>
                         <i class="uil uil-lock icon"></i>
                        <i class="uil {{eyeIcon}} showHidePw" (click)="showPassword(isPasswordHide)"></i>
                     </div>
@@ -75,7 +75,7 @@
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" id="password" placeholder="Create a password" onkeyup='check();' required>
+                        <input type="{{conPasswordType}}" class="password" id="password" placeholder="Create a password" onkeyup='check();' required>
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
