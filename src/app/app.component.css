@@ -5,7 +5,6 @@
   align-items: center;
   font-family: sans-serif;
 }
-
 .nav-title {
   text-decoration: none;
   color: white;
@@ -13,19 +12,17 @@
 }
 .navbar li {
   display: inline-block;
-  margin: 5px 20px;
+  margin: 0px 15px;
   position: relative;
   margin-left: 3vw;
-  text-align: right;
+  left: 13vw;
 }
 .nav-item a {
   color: white;
   text-decoration: none;
+  font-size: 23px;
 }
 .nav-item i {
   font-size: 30px;
+}
 
-}
-.nav-right {
-  position: relative;
-}
