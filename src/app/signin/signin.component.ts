@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {SignInService} from '../services/signin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -22,7 +23,7 @@ export class SigninComponent implements OnInit {
   signupForm:any;
 
 
-  constructor(private signInService: SignInService) {
+  constructor(private signInService: SignInService, private router: Router) {
    }
 
   ngOnInit(): void {
@@ -44,6 +45,7 @@ export class SigninComponent implements OnInit {
       
       console.log(data);
       this.signInService.signin(data).subscribe(res=>{
+        
         console.log(res);
       });
     }
@@ -56,17 +58,21 @@ export class SigninComponent implements OnInit {
       
       console.log(data);
       this.signInService.signUp(data).subscribe(res=>{
+       
         console.log(res);
       });
     }
   }
 
   showPassword(isVisible:any){
+
     if(isVisible){
     this.conPasswordType = 'text';
     this.eyeIcon = 'uil-eye';
     this.isPasswordHide = false;
-    } else{
+    } 
+    
+    else{
       this.conPasswordType = 'password';
       this.eyeIcon = 'uil-eye-slash';
       this.isPasswordHide = true;
