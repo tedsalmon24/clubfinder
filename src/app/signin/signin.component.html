@@ -22,7 +22,7 @@
         <div class="forms">
             <!-- Login Form -->
             <div class="form login" *ngIf="isSignupHide">
-                <span class="title">Login</span>
+                <span class="title">Login Page</span>
 
                 <div id="message_container" >
                     <div id="login_msg" class="info">Info message</div>
@@ -68,7 +68,7 @@
 
             <!-- Registration Form -->
             <div class="form signup" *ngIf="!isSignupHide">
-                <span class="title">Registration</span>
+                <span class="title">Registration Page</span>
 
                 <form [formGroup]="signupForm" (ngSubmit)="submit(signupForm.value)">
                     <div class="input-field">

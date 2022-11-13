@@ -18,5 +18,9 @@ export class SignInService {
     return this.http.post('http://localhost:8080/backend/user_register.php',data);
   }
 
+  events(data:any){
+    return this.http.post('http://localhost:8080/backend/events.php',data);
+  }
+  }
 
-}
+

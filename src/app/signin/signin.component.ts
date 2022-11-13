@@ -58,11 +58,13 @@ export class SigninComponent implements OnInit {
       
       console.log(data);
       this.signInService.signUp(data).subscribe(res=>{
+        console.log();
        
         console.log(res);
       });
     }
   }
+
 
   showPassword(isVisible:any){
 
