@@ -8,6 +8,8 @@ import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { MatchedComponent } from './matched/matched.component';
 import { SettingsComponent } from './settings/settings.component';
+import { eventPostComponent } from './eventPost/eventPost.component';
+import { EventManager } from '@angular/platform-browser';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +20,7 @@ const routes: Routes = [
   {path: 'signin', component: SigninComponent},
   {path: 'matched', component: MatchedComponent},
   {path: 'settings', component: SettingsComponent},
+  {path: 'eventPost', component: eventPostComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
