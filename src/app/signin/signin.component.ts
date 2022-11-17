@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {SignInService} from '../services/signin.service';
 import { Router } from '@angular/router';
 
@@ -21,6 +21,7 @@ export class SigninComponent implements OnInit {
   name='';
   loginForm: any;
   signupForm:any;
+  isLoginFormValid = true;
 
 
   constructor(private signInService: SignInService, private router: Router) {
@@ -30,25 +31,31 @@ export class SigninComponent implements OnInit {
   this.loginForm = new FormGroup({
     username: new FormControl(),
     password: new FormControl()
-  })
+  });
+
   this.signupForm = new FormGroup({
     name: new FormControl(),
     username: new FormControl(),
     password: new FormControl(),
     confirmpassword: new FormControl()
-  })
+  });
 
   }
 
   onSubmit(data: any){
     if(this.loginForm.valid){
-      
+     
       console.log(data);
-      this.signInService.signin(data).subscribe(res=>{
+      this.signInService.signin(data).subscribe((res:any)=>{
+
+        localStorage.setItem('token', res.token);
+        this.router.navigate(['/eventPost']);
+        this.signInService.checkSignin.next(true);
+
         
         console.log(res);
       });
-    }
+    } 
    
     
   }
@@ -59,7 +66,10 @@ export class SigninComponent implements OnInit {
       console.log(data);
       this.signInService.signUp(data).subscribe(res=>{
         console.log();
-       
+       // this.router.navigate(['/']);
+       this.isSignupHide = true;
+       this.signupForm.reset();
+
         console.log(res);
       });
     }

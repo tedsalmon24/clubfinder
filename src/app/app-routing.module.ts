@@ -13,6 +13,7 @@ import { EventManager } from '@angular/platform-browser';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'organizations', component: OrganizationsComponent},
   {path: 'match', component: MatchComponent},
