@@ -24,7 +24,17 @@ export class SignInService {
 
   events(data:any){
     return this.http.post('http://localhost:8080/backend/events.php',data);
+
   }
+
+  eventType(data:any){
+    return this.http.get('http://localhost:8080/backend/eventType.php?get_events=1',data);
+
+
+  }
+  
+ 
+
   }
 
 

@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
+import { eventPostComponent } from './eventPost/eventPost.component';
+
 import { MatchComponent } from './match/match.component';
 import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
@@ -28,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     SettingsComponent,
     Matched2Component,
     Matched3Component,
+    eventPostComponent 
   ],
   imports: [
     BrowserModule,
