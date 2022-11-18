@@ -3,7 +3,7 @@
   href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
 />
 <div class="navbar-header">
-  <a routerLink="/" class="nav-title"><img src="../assets/img/logo.png" width="120" height="62.25px"></a>
+  <a routerLink="/" class="nav-title"><img src="../assets/img/E.png" width="80" height="80px"></a>
   <div class="navbar">
     <ul class="navbar-nav mx-sm-auto">
       <li class="nav-item">
@@ -12,19 +12,23 @@
       </li>
       <li class="nav-item">
           <a [routerLinkActive]="['active']" class="nav-link" id="directory"
-          routerLink="/organizations" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Organizations</a>
+          routerLink="/organizations" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Feed</a>
       </li>
-      <li class="nav-item">
-          <a [routerLinkActive]="['active']" class="nav-link" id="directory"
-          routerLink="/match" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Match</a>
-      </li>
-    <li class="nav-item">
-      <a [routerLinkActive]="['active']" class="nav-link" id="signin"
-      routerLink="/signin" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sign In</a>
-  </li>
   <li class="nav-item">
     <a [routerLinkActive]="['active']" class="nav-link" id="eventPost"
-    routerLink="/eventPost" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">post your events here</a>
+    routerLink="/eventPost" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Events+</a>
+</li>
+<li class="nav-item" *ngIf="!isLoggedin">
+  <a [routerLinkActive]="['active']" class="nav-link" id="signin"
+  routerLink="/signin" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sign In</a>
+</li>
+<li class="nav-item" *ngIf="isLoggedin">
+  <a  (click)="signOut()" class="nav-link" id="signin" 
+  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sign Out</a>
+</li>
+<li class="nav-item">
+  <a [routerLinkActive]="['active']" class="nav-link" id="directory"
+  routerLink="/match" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Search</a>
 </li>
   <li class="nav-item" id="nav-right">
     <a [routerLinkActive]="['active']" class="nav-link" id="settings"

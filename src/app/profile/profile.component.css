@@ -3,7 +3,7 @@
 h1, h2, h3, h4, h5 {
   border: 1px solid #DFDFDF;
   border-radius: 25px 25px;
-  color: #60847c;
+  color: #4c7eb2;
   padding-bottom: 8px;
   background-color: #EFEFEF;
 }
@@ -45,7 +45,7 @@ img {
   cursor: pointer;
   padding-top: 110px;
   transition: .3s ease;
-  background-color: #60847c;
+  background-color: #4c7eb2;
   width: 300px;
   height: 300px;
   border-radius: 50%;
