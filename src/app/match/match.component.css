@@ -1,31 +1,126 @@
-/* button config */
-.btn {
-  border: .5px solid black;
-  background-color: #60847c;
-  padding: 15px 55px;
-  font-size: 15px;
-  font-weight: 550;
-  cursor: pointer;
-  border-radius: 25px 25px;
-  text-align:center;
-  white-space: nowrap;
-  text-transform: uppercase;
-  transition: all ease 0.15s;
-  margin: 10px 10px;
+/* Logo */
+.logo {
+  padding: 20px 20px 1px;
+}
+.logo > h1 {
+  display: flex;
+  flex-direction: row;
+}
+.logo > h1:before,
+.logo > h1:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #000;
+  margin: auto;
+  box-shadow: 0 8px 40px 3px grey;
+}
+.logo > img {
+  border-radius: 50%;
+}
+.bannercontainer {
+  padding: 0px 150px 50px;
+}
+.container > h1 {
   color: white;
-}
-/* on hover */
-.btn:hover {
-  position: relative;
-  background: black;
-  transform: translateY(-7px);
-  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-  }
-
-.ready {
-text-align: center;
-}
-.ready > h2 {
   font-size: 35px;
-  font-weight: 200;
+  font-weight: 320;
+  padding-top: 15px;
+}
+.container {
+  border-radius: 25px 25px;
+  border: 1px solid black;
+  padding-bottom: 15px;
+  box-shadow: 0 8px 40px 2px grey;
+  margin-left: -25px;
+  margin-right: -25px;
+  background-color: #4c7eb2;
+}
+.banner {
+ margin-left: 20px;
+ margin-right:20px;
+ padding: 0px 0px 20px;
+ position: relative;
+ height: 14px;
+}
+.banner > h1 {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}
+
+/* About Section */
+.aboutus {
+  text-align: center;
+  box-shadow: 0 8px 40px 2px grey;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom:50px;
+  border-radius: 25px 25px;
+}
+.aboutus h1{
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 25px;
+  padding-bottom: 10px;
+  margin-top: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 320;
+  line-height: 44px;
+}
+.aboutus h2 {
+padding-top: 10px;
+}
+/* header color and text */
+.home-header {
+  padding: 0px 35px 60px;
+  font-family: Gilroy, sans-serif;
+  padding-top: 15px;
+}
+.home-header > h2 {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 600;
+}
+.aboutus > p {
+  padding: 20px;
+  font-size: 22px;
+  line-height: 1.2;
+  display: inline-block;
+  font-size: 25px;
+  padding-bottom: 10px;
+  font-weight: 320;
+}
+
+.search {
+  text-align: center;
+  box-shadow: 0 8px 40px 2px grey;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom:50px;
+  border-radius: 25px 25px;
+  width: auto;
+  height: 100%;
+}
+.searchBar {
+  margin:auto;
+  box-shadow: 0 8px 40px 2px#4c7eb2;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom:50px;
+  padding-top: 50px;
+  border-radius: 25px 25px;
+  width: 50%;
+  
+}
+.eventResults {
+  margin: 0 auto;
+  box-shadow: 0 8px 40px 2px #4c7eb2;
+  min-height: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom:50px;
+  padding-top: 50px;
+  height:min-content
+  ;
+  width: 75%;
 }
