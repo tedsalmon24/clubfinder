@@ -172,12 +172,12 @@ body{
     border-radius: 20px;
     width: 100%;
     height: 40px;
-    background-color: #60847c;;
+    background-color: #4c7eb2;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .form .btn:hover{
-    background-color:#395640;
+    background-color:#2e4c6b;
 }
 
 /* error message */
@@ -206,10 +206,10 @@ body{
 .error{
     color: #D8000C;
     background-color: #FFBABA;
-   
+
 }
 .validation{
     color: #D63301;
     background-color: #FFCCBA;
-   
+
 }

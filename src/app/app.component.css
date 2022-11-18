@@ -1,6 +1,5 @@
 .navbar-header {
   background-color: #4c7eb2;
-  padding: 30px 50px;
   display: flex;
   align-items: center;
   font-family: sans-serif;
@@ -12,17 +11,21 @@
 }
 .navbar li {
   display: inline-block;
-  margin: 0px 15px;
+  margin: 0px 8px;
   position: relative;
   margin-left: 3vw;
-  left: 13vw;
+  left: 25vw;
 }
 .nav-item a {
   color: white;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 28px;
 }
 .nav-item i {
   font-size: 30px;
 }
 
+.floatright {
+  position: relative;
+  left: 240px;
+}

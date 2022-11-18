@@ -112,7 +112,7 @@ box-sizing: border-box;
 .column {
 float: left;
 width: 30%;
-height: 500px; /* Should be removed. Only for demonstration */
+height: 350px; /* Should be removed. Only for demonstration */
 }
 #notifications {
 margin-left: 20px;
