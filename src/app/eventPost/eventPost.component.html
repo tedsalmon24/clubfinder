@@ -17,25 +17,50 @@
 
             <div class="settingBox">
               <h2>Event Details</h2>
+
+              <form [formGroup]=' eventPostForm' (ngSubmit)="onSubmit(eventPostForm.value)">
+
                 <div class="settings" >
 
+                  <label for="eventtypeId">Event type</label>
+                  <input type="text" formControlName="eventtypeId">
+
+                    <!--- ╌  value="sports">Sports</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Hobbies">Hobbies</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Education">Education</option>
+                    <option value="Proffesional">Proffesional</option>
+                    <option value="Food & Drink">Food & Drink</option>
+                    <option value=" Recreational & Fitness"> Recreational & Fitness</option>
+                    <option value=" Virtual Events"-->
+
                 <label for="title">Title</label>
-                <input name="title" type="text" required><br>
+                <input  formControlName="title" type="text" required><br>
 
-                <label for="street-address">Description</label>
-                <textarea name="event-discription" rows="10" maxlength="1000"></textarea><br>
+                <label for="description">Description</label>
+                <input  formControlName="description" type="text" required><br>
 
-                <label for="street-address">Location</label>
-                <input name="street-address" id="street-address" autocomplete="on" /><br>
+                <label for="location">Venue name</label>
+                <input  formControlName="location" id="location" required><br>
 
-                <label for="contact-info">Phone Number</label>
-                <input type="text" placeholder="xxx-xxx-xxxx" minlength="10" required><br>
+                <label for="locationAddress">Location address</label>
+                <input  formControlName = locationAddress><br>
 
-                <label for="email">E-mail Address</label>
-                <input type="text" required><br>
+                <label for="startDate">Start Date</label>
+                <input type= "datetime-local"
+                id="startDate"  formControlName="startDate" required><br>
 
+
+                <label for="endDate">End Date</label>
+                <input type= "datetime-local"
+                id="endDate"  formControlName="endDate"required><br>
+
+              
                 <button id="button" type="submit">Submit</button>
+            
                 </div>
+                </form>
             </div>
                 <br><br>
       </div>
