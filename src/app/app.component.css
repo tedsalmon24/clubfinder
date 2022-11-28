@@ -29,3 +29,57 @@
   position: relative;
   left: 240px;
 }
+
+footer {
+  position: relative;
+  padding: 10px0 10px 55px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+.footer-box {
+  width: 100%;
+  bottom: 0;
+}
+.bi-linkedin {
+  position: relative;
+  float: right;
+  color: white;
+}
+
+.footer-container {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: gray;
+}
+
+/* Footer Information */
+.footerinformation {
+  margin-top: 150px;
+  padding: 10px 0px 5px;
+  background-color: grey;
+}
+.footerinformation > h1 {
+text-align: center;
+}
+
+.logolinks {
+  text-align: center;
+}
+.logolinks > a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  left: 100px;
+  top: 0px;
+  font-weight: 400;
+  display:inline-block;
+  padding: 0px 30px 10px;
+  cursor: pointer;
+}
+.logolinks > p {
+  color: white;
+  font-size: 12px;
+}
