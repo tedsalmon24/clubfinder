@@ -77,3 +77,23 @@ height: 350px;
 .bio > h1, .goals > h1, .personality > h1,.brands > h1 {
   text-align: center;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  }
+  .button {
+    background-color: #4c7eb2;
+    font-size: 23px;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 40px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  .button:hover {
+    background-color:#2e4c6b;
+  }
