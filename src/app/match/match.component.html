@@ -1,8 +1,21 @@
 <div class="home-header"></div>
 <div class="search">
-  <input class="searchBar" type="text" placeholder="Search Events.." />
+  <input class="searchBar" [(ngModel)]="searchTerm" type="text" placeholder="Search .."(click)="search()" />
 </div>
 <div class="feedContainer">
   <h1>Results</h1>
-  <div class="eventResults"></div>
+  <div class="eventResults">
+<!-- testing to see if the back end os working -->
+    <table>
+      <tr>
+          <th>Name</th>
+          <th>Description</th>
+      </tr>
+      <tr *ngFor="let club of searchedClubs">
+          <td>{{club.Name}}</td>
+          <td [innerHTML]="club.Description"></td>
+          
+          </tr>
+  </table>
+  </div>
 </div>
