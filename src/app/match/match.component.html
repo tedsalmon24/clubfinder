@@ -1,6 +1,6 @@
 <div class="home-header"></div>
 <div class="search">
-  <input class="searchBar" [(ngModel)]="searchTerm" type="text" placeholder="Search .."(click)="search()" />
+  <input class="searchBar" [(ngModel)]="searchTerm" type="text" placeholder="Search Clubs .."(click)="search()" />
 </div>
 <div class="feedContainer">
   <h1>Results</h1>
@@ -14,7 +14,7 @@
       <tr *ngFor="let club of searchedClubs">
           <td>{{club.Name}}</td>
           <td [innerHTML]="club.Description"></td>
-          
+
           </tr>
   </table>
   </div>
