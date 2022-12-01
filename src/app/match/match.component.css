@@ -10,6 +10,7 @@
   border-radius: 25px 25px;
   width: auto;
   height: 100%;
+
 }
 .searchBar {
   margin:auto;
@@ -32,11 +33,23 @@ font-size: 50px;
 }
 
 .eventResults {
-  margin: 0 auto;
-  box-shadow: 0 8px 40px 2px #4c7eb2;
-  min-height: 100%;
-  padding: 1 50px;
-  margin-top: 50px;
-  height: min-content;
-  width: 50%;
+  margin-bottom: 40px;
+
 }
+.eventResults .name{
+  color: #1a76d9;
+  margin:0px;
+  text-decoration: none;
+
+}
+
+
+.eventResults .url{
+  color: #3a3a3a;
+  text-decoration: none;
+
+}
+
+
+  
+

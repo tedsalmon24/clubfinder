@@ -4,18 +4,20 @@
 </div>
 <div class="feedContainer">
   <h1>Results</h1>
-  <div class="eventResults">
-<!-- testing to see if the back end os working -->
-    <table>
-      <tr>
-          <th>Name</th>
-          <th>Description</th>
-      </tr>
-      <tr *ngFor="let club of searchedClubs">
-          <td>{{club.Name}}</td>
-          <td [innerHTML]="club.Description"></td>
-
-          </tr>
-  </table>
   </div>
-</div>
+  
+    <div class="eventResults" *ngFor="let club of searchedClubs">
+  
+      <a [href]="club?.webLink" target="_blank" class="name">
+        <h4>
+       
+        {{club?.Name}}
+      </h4>
+      </a>
+      <a href="#" target="_blank" class="url">{{club?.webLink}}</a>
+      <td [innerHTML]="club.Description"></td>
+
+    </div>
+   
+      
+

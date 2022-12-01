@@ -8,10 +8,11 @@ interface Club {
   ShortName:string;
   WebsiteKey:string;
   Description: string;
-  summary:string;
-  //picture:string;
+  Summary:string;
+  picture:any;
   CategoryIds:string;
   CategoryNames: string;
+  webLink:any
 }
 @Component({
   selector: 'app-match',
