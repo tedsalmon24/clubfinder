@@ -47,9 +47,10 @@ export class SigninComponent implements OnInit {
      
       console.log(data);
       this.signInService.signin(data).subscribe((res:any)=>{
-         alert(res.token);
+         alert(res.message);
         localStorage.setItem('token', res.token);
-        this.router.navigate(['/eventPost']);
+
+        this.router.navigate(['/home']);
         this.signInService.checkSignin.next(true);
 
         
