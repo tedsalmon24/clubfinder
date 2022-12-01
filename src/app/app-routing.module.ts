@@ -7,6 +7,8 @@ import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { MatchedComponent } from './matched/matched.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { ResultsComponent } from './results/results.component';
 import { SettingsComponent } from './settings/settings.component';
 import { eventPostComponent } from './eventPost/eventPost.component';
 import { EventManager } from '@angular/platform-browser';
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path: 'chat', component: ChatComponent},
   {path: 'signin', component: SigninComponent},
   {path: 'matched', component: MatchedComponent},
+  {path: 'quiz', component: QuizComponent},
+  {path: 'results', component: ResultsComponent},
   {path: 'settings', component: SettingsComponent},
   {path: 'eventPost', component: eventPostComponent},
 ];

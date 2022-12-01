@@ -1,0 +1,23 @@
+<div class="home-header"></div>
+<div class="search"></div>
+
+<div class="formContainer">
+    <h1>Tell us how you feel about the following categories </h1><br>
+
+    <form [formGroup]="createQuizForm"> 
+
+        <fieldset class="box" *ngFor="let cat of categories; let i = index;">
+            <legend class="legend">{{cat}}</legend>
+            <label class="mylabel"><input type="radio" formControlName="{{cat}}" name="{{cat}}" value="Highly Uninterested"/>Highly Uninterested</label>
+            <label class="mylabel"><input type="radio" formControlName="{{cat}}" name="{{cat}}" value="Not Interested"/>Not Interested</label>
+            <label class="mylabel"><input type="radio" formControlName="{{cat}}" name="{{cat}}" value="Interested"/>Interested</label>
+            <label class="mylabel"><input type="radio" formControlName="{{cat}}" name="{{cat}}" value="Highly Interested"/>Highly Interested</label>
+        </fieldset>
+
+        <div class="searchOrg">
+            <div (click)="callQuiz()"><br>Search</div>
+        </div>
+
+    </form>
+
+</div>
