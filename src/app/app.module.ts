@@ -11,6 +11,8 @@ import { ChatComponent } from './chat/chat.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { MatchedComponent } from './matched/matched.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { ResultsComponent } from './results/results.component';
 import { SettingsComponent } from './settings/settings.component';
 import { Matched2Component } from './matched2/matched2.component';
 import { Matched3Component } from './matched3/matched3.component';
@@ -27,6 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     SigninComponent,
     HomeComponent,
     MatchedComponent,
+    QuizComponent,
+    ResultsComponent,
     SettingsComponent,
     Matched2Component,
     Matched3Component,

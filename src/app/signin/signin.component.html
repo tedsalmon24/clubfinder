@@ -21,110 +21,147 @@
 <div class="row">
   <div class="column">
     <div class="container">
-
       <div class="forms">
-          <!-- Login Form -->
-          <div class="form login" *ngIf="isSignupHide">
-              <span class="title">Login Page</span>
+        <!-- Login Form -->
+        <div class="form login" *ngIf="isSignupHide">
+          <span class="title">Login Page</span>
 
-              <div id="message_container" *ngIf="!isLoginFormValid">
-                  <div id="login_msg" class="info">Info message</div>
-
-              </div>
-
-           <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
-
-                  <div class="input-field">
-                      <input type="text" id="username" placeholder="Enter username" formControlName="username" >
-                      <i class="uil uil-envelope icon"></i>
-                  </div>
-
-
-                  <div class="input-field">
-                      <input type="{{conPasswordType}}" formControlName="password" id="userpassword" class="password" placeholder="Enter your password" required>
-                      <i class="uil uil-lock icon"></i>
-                     <i class="uil {{eyeIcon}} showHidePw" (click)="showPassword(isPasswordHide)"></i>
-                  </div>
-
-                  <div class="checkbox-text">
-                      <div class="checkbox-content">
-                          <input type="checkbox" id="logCheck">
-                          <label for="logCheck" class="text">Remember me</label>
-                      </div>
-
-                      <a href="#" class="text">Forgot password?</a>
-                  </div>
-
-
-
-                  <button class="btn"  type="submit" class="btn btn-primary">
-                      Log in
-                      </button>
-             </form>
-
-              <div class="login-signup">
-                  <span class="text">Not a member?
-                      <a (click)="isSignupHide = !isSignupHide" class="text signup-link">Signup Now</a>
-                  </span>
-              </div>
+          <div id="message_container" *ngIf="!isLoginFormValid">
+            <div id="login_msg" class="info">Info message</div>
           </div>
 
-          <!-- Registration Form -->
-          <div class="form signup" *ngIf="!isSignupHide">
-              <span class="title">Registration Page</span>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+            <div class="input-field">
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                formControlName="username"
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
 
-              <form [formGroup]="signupForm" (ngSubmit)="submit(signupForm.value)">
-                  <div class="input-field">
-                      <input type="text" id="name"  formControlName="name" placeholder="Enter your name"required>
-                      <i class="uil uil-user"></i>
-                  </div>
-                  <div class="input-field">
-                      <input type="text" id="username" placeholder="Enter username" formControlName="username"required>
-                      <i class="uil uil-envelope icon"></i>
-                  </div>
+            <div class="input-field">
+              <input
+                type="{{ conPasswordType }}"
+                formControlName="password"
+                id="userpassword"
+                class="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i
+                class="uil {{ eyeIcon }} showHidePw"
+                (click)="showPassword(isPasswordHide)"
+              ></i>
+            </div>
 
-                  <div class="input-field">
-                      <input type="{{conPasswordType}}" formControlName="password" class="password" id="password" placeholder="Create a password" required>
-                      <i class="uil uil-lock icon"></i>
-                  </div>
-                  <div class="input-field">
-                      <input type="{{conPasswordType}}" formControlName="confirmpassword" class="password" id="confirmpassword" placeholder="Confirm a password" required>
-                      <i class="uil uil-lock icon"></i>
-                      <i class="uil {{eyeIcon}} showHidePw" (click)="showPassword(isPasswordHide)"></i>
-                  </div>
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck" />
+                <label for="logCheck" class="text">Remember me</label>
+              </div>
 
-                  <span id='message'></span>
-                  <!-- <div class="checkbox-text">
+              <a href="#" class="text">Forgot password?</a>
+            </div>
+
+            <button class="btn" type="submit" class="btn btn-primary">
+              Log in
+            </button>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Not a member?
+              <a (click)="isSignupHide = !isSignupHide" class="text signup-link"
+                >Signup Now</a
+              >
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form signup" *ngIf="!isSignupHide">
+          <span class="title">Registration Page</span>
+
+          <form [formGroup]="signupForm" (ngSubmit)="submit(signupForm.value)">
+            <div class="input-field">
+              <input
+                type="text"
+                id="name"
+                formControlName="name"
+                placeholder="Enter your name"
+                required
+              />
+              <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                formControlName="username"
+                required
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+
+            <div class="input-field">
+              <input
+                type="{{ conPasswordType }}"
+                formControlName="password"
+                class="password"
+                id="password"
+                placeholder="Create a password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="{{ conPasswordType }}"
+                formControlName="confirmpassword"
+                class="password"
+                id="confirmpassword"
+                placeholder="Confirm a password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i
+                class="uil {{ eyeIcon }} showHidePw"
+                (click)="showPassword(isPasswordHide)"
+              ></i>
+            </div>
+
+            <span id="message"></span>
+            <!-- <div class="checkbox-text">
                       <div class="checkbox-content">
                           <input type="checkbox" id="termCon">
                           <label for="termCon" class="text">I accepted all terms and conditions</label>
                       </div>
                   </div> -->
 
-                  <button class="btn"  type="submit" class="btn btn-primary">
-                      Sign Up
-                      </button>
+            <button class="btn" type="submit" class="btn btn-primary">
+              Sign Up
+            </button>
+          </form>
 
-
-              </form>
-
-              <div class="login-signup">
-                  <span class="text">Already a member?
-                      <a (click)="isSignupHide = !isSignupHide" class="text login-link">Login Now</a>
-                  </span>
-              </div>
+          <div class="login-signup">
+            <span class="text"
+              >Already a member?
+              <a (click)="isSignupHide = !isSignupHide" class="text login-link"
+                >Login Now</a
+              >
+            </span>
           </div>
+        </div>
       </div>
+    </div>
   </div>
-
-
-
-
-  </div>
-  <div class="column" style="background-image: url('/assets/img/explore.jpg');">
-      <div class="rightside">
+  <div class="column" style="background-image: url('/assets/img/explore.jpg')">
+    <div class="rightside">
       <h1>Explore ClubFinder</h1>
     </div>
-    </div>
   </div>
-
+</div>

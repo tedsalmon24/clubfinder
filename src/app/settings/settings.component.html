@@ -106,7 +106,7 @@
     <h2>Notification Preferences</h2>
   </div>
   <div class="title2">
-    <h2>Edit Profile</h2>
+    <h2>Profile</h2><h2 class="userinfo">User Info</h2>
   </div>
 </div>
 <div class="row">
@@ -137,87 +137,73 @@
   </div>
 
   <!-- end of column 1-->
+
+  <!-- Edit Profile -->
   <div class="column" style="background-color: #ffc000" id="profile1">
-  
     <div class="home-header3">
       <div class="eventPost3">
         <div class="settingBox3">
-
-          <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm.value)">
-          <div class="settings3">
-
-        
-            <label for="bio">Bio</label>
-                <input  formControlName="bio" type="text" required><br>
-
-                <label for="description">About me</label>
-                <textarea name="event-discription" rows="5" maxlength="100" formControlName="about" type="text"></textarea><br>             
-
-                <label for="location">Interests</label>
-                <input  formControlName="interest" id="interest" required><br>
-
-            <button id="button" type="submit">Submit</button>
-          
-            </div>
-           </form>
-          </div>
-        </div>
-      </div>
-    
-    </div>
-
-    <!-- <div class="column" style="background-color: #ffc000" id="profile2">
-      <div class="home-header3">
-        <div class="eventPost3">
-          <div class="settingBox3">
+          <form
+            [formGroup]="profileForm"
+            (ngSubmit)="onSubmit(profileForm.value)"
+          >
             <div class="settings3">
+              <label for="bio">Bio</label>
+              <input formControlName="bio" type="text" required /><br />
 
-              <form [formGroup]='profileForm' (ngSubmit)="submit(profileForm.value)">
-              
-              <label for="password">Old Password</label>
-              <input type="text" formControlName="oldPassword" required /><br />
-              <label for="new_password"> New Password</label>
-              <input type="text" formControlName="newPassword"required /><br />
-              <label for="c_new_password"> Confirm new password</label>
-              <input type="text" formControlName="confirmNew"required /><br />
+              <label for="description">About me</label>
+              <textarea
+                name="event-discription"
+                rows="2"
+                maxlength="100"
+                formControlName="about"
+                type="text"
+              ></textarea
+              ><br />
+
+              <label for="location">Interests</label>
+              <input formControlName="interest" id="interest" required /><br />
 
               <button id="button" type="submit">Submit</button>
-            </form>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
-            
- 
-          
-        
- -->
-
- <div class="column" style="background-color: #ffc000" id="profile2">
-  
-  <div class="home-header3">
-    <div class="eventPost3">
-      <div class="settingBox3">
-
-        <form [formGroup]='passwordForm' (ngSubmit)="submit(passwordForm.value)">
-        <div class="settings3">
-
+  </div>
+  <!-- Credentials -->
+  <div class="column" style="background-color: #ffc000" id="profile2">
+    <div class="home-header3">
+      <div class="eventPost3">
+        <div class="settingBox3">
+          <form
+            [formGroup]="passwordForm"
+            (ngSubmit)="submit(passwordForm.value)"
+          >
+            <div class="settings3">
               <label for="dpass">Old Password</label>
-              <input type="text" name="password" formControlName="oldPassword" required><br>             
+              <input
+                type="text"
+                name="password"
+                formControlName="oldPassword"
+                required
+              /><br />
 
               <label for="newPassword">New Password</label>
-              <input  formControlName="newPassword" id="newPassword" required><br>
+              <input
+                formControlName="newPassword"
+                id="newPassword"
+                required
+              /><br />
 
               <label for="confirmNew">Confirm new password</label>
-              <input  formControlName="confirmNew" type="text" required><br>
+              <input formControlName="confirmNew" type="text" required /><br />
 
-          <button id="button" type="submit">Submit</button>
-        
-          </div>
-         </form>
+              <button id="button" type="submit">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  
   </div>
+</div>
