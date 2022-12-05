@@ -42,9 +42,10 @@ export class SignInService {
   }
 
 
-  getProfile(data:any){
+  getProfile(token:any){
+   
 
-    return this.http.get('http://localhost/backend/get_profile.php', data)
+    return this.http.get('http://localhost/backend/get_profile.php?token='+ token)
 
   }
   

@@ -50,7 +50,7 @@ export class SigninComponent implements OnInit {
          alert(res.message);
         localStorage.setItem('token', res.token);
 
-        this.router.navigate(['/home']);
+        this.router.navigate(['/profile']);
         this.signInService.checkSignin.next(true);
 
         

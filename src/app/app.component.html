@@ -19,7 +19,7 @@
   <a [routerLinkActive]="['active']" class="nav-link" id="directory"
   routerLink="/match" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Search</a>
 </li>
-<li class="nav-item">
+<li class="nav-item" *ngIf="isLoggedin">
   <a [routerLinkActive]="['active']" class="floatright" id="profile"
   routerLink="/profile" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><i class="fa-solid fa-user"></i></a>
 </li>
@@ -31,7 +31,7 @@
   <a  (click)="signOut()" class="floatright" id="signin"
   data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sign Out</a>
 </li>
-  <li class="nav-item">
+  <li class="nav-item" *ngIf="isLoggedin">
     <a [routerLinkActive]="['active']" class="floatright"
     routerLink="/settings" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><i class="fa-solid fa-gear"></i></a>
 </li>
