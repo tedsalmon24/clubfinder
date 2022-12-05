@@ -31,7 +31,7 @@ export class OrganizationsComponent implements OnInit {
     console.log(this.date);
     let newDate = new Date();
     let numberOfMiliseconds = newDate.getTime() - this.date.getTime();
-    let numberOfDays = Math.round(numberOfMiliseconds / (1000 * 60*60 * 24));
+    let numberOfDays = Math.round(numberOfMiliseconds / (1000 * 3600 * 24));
     console.log(numberOfDays);
 
     this.http.get<Club[]>('./assets/json/data.json')
@@ -40,8 +40,8 @@ export class OrganizationsComponent implements OnInit {
       console.log(this.clubs);
       // let randomData = this.clubs.sort(()=> 0.5 - Math.random());
       // console.log(randomData);
-      if(numberOfDays%5==0){
-      this.featuredClubs = this.clubs.slice((Math.ceil((numberOfDays)/5)-1)*10,Math.ceil((numberOfDays)/5)*10);
+      if(numberOfDays%6==0){
+      this.featuredClubs = this.clubs.slice((Math.ceil((numberOfDays)/6)-1)*10,Math.ceil((numberOfDays)/6)*10);
       }
       console.log(this.featuredClubs);
     });
