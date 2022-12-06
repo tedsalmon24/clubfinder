@@ -8,7 +8,7 @@ interface Club {
   WebsiteKey:string;
   Description: string;
   Summary:string;
-  picture:any;
+  ProfilePicture:any;
   CategoryIds:string;
   CategoryNames: string;
   webLink:any
