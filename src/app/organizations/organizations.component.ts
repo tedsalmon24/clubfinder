@@ -30,17 +30,20 @@ export class OrganizationsComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.date);
     let newDate = new Date();
+    // calculates the number of milliseconds 
     let numberOfMiliseconds = newDate.getTime() - this.date.getTime();
+    // gets the number of days 
     let numberOfDays = Math.round(numberOfMiliseconds / (1000 * 3600 * 24));
     console.log(numberOfDays);
 
+
+    // gets the json data 
     this.http.get<Club[]>('./assets/json/data.json')
     .subscribe((data: any) => {
       this.clubs = data.value;
       console.log(this.clubs);
-      // let randomData = this.clubs.sort(()=> 0.5 - Math.random());
-      // console.log(randomData);
       if(numberOfDays%6==0){
+      // the data changes after 6 days, It goes from array 0-9 to 10-9 and so on
       this.featuredClubs = this.clubs.slice((Math.ceil((numberOfDays)/6)-1)*10,Math.ceil((numberOfDays)/6)*10);
       }
       console.log(this.featuredClubs);

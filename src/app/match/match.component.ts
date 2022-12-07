@@ -32,7 +32,7 @@ export class MatchComponent implements OnInit {
 
   ngOnInit(): void {
 
-    //call to json
+    //gets the data from json file
 
     this.http.get<Club[]>('./assets/json/data.json')
       .subscribe((data: any) => {
@@ -46,9 +46,11 @@ export class MatchComponent implements OnInit {
 
     console.log(this.searchTerm);
     this.searchedClubs = [];
+      //copy of clubs 
     this.clubs.filter(item=>{
       if(item.Name.toLowerCase().includes(this.searchTerm.toLowerCase()))
       {
+        //pushes to the searched clubs if search term name is in the club   
         this.searchedClubs.push(item);
       }
     });

@@ -28,6 +28,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     
 
+    // After user is logged in it gets the data from the getProfile backend using the token
+
     this.signInService.getProfile(this.token).subscribe((data:any)=>{
 
       console.log(data);

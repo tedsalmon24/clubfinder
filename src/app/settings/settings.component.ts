@@ -42,6 +42,7 @@ export class SettingsComponent implements OnInit {
     if(this.profileForm.valid){
      
       console.log(data);
+      // posts the data to the profile backend in the signin service 
       this.signInService.profile(data).subscribe((res:any)=>{
         alert(res.message);
         this.profileForm.reset();
@@ -57,8 +58,11 @@ export class SettingsComponent implements OnInit {
     if(this.passwordForm.valid){
      
       console.log(data);
+
+      // posts the data to the update password backend in the signin service 
       this.signInService.updatePassword(data).subscribe((res:any)=>{
         alert(res.message);
+        //resets after the user updates the information
         this.passwordForm.reset();
         console.log(res);
       });
