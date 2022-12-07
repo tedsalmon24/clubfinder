@@ -1,8 +1,9 @@
+/* body */
 .home-header {
     padding: 0px 35px 15px;
     font-family: Gilroy, sans-serif;
   }
-
+/* bulk CSS */
   .formContainer {
     position: relative;
     text-align: center;
@@ -15,5 +16,5 @@
     margin-top: 50px;
     height: min-content;
     width: 50%;
-  
+
   }
