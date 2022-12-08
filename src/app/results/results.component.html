@@ -1,37 +1,39 @@
+<!-- DISREGARD PAGE -->
 <div class="home-header"></div>
 <div class="search"></div>
 
 <div class="formContainer">
-    <div class="title"><span>Results</span></div>
-    <div>
-        <span class="titleCategories">Categories:</span>
-        <span class="categories" *ngFor="let cat of catSelected; let i = index;"> {{cat}} 
-            <span *ngIf="i < catSelected.length-1">|</span>
-        </span>
-    </div>
-    <div>
-        <br>
-        <span class="titleCategories">Organizations <span class="total">({{totalOrgs}})</span>:</span>
-    </div>
-    <!-- <ul>
+  <div class="title"><span>Results</span></div>
+  <div>
+    <span class="titleCategories">Categories:</span>
+    <span class="categories" *ngFor="let cat of catSelected; let i = index">
+      {{ cat }}
+      <span *ngIf="i < catSelected.length - 1">|</span>
+    </span>
+  </div>
+  <div>
+    <br />
+    <span class="titleCategories"
+      >Organizations <span class="total">({{ totalOrgs }})</span>:</span
+    >
+  </div>
+  <!-- <ul>
         <li *ngFor="let org of orgResults;">
             {{org}}
         </li>
     </ul> -->
-    <table class="tableContent">
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-        <tr *ngFor="let org of orgResults;">
-          <td>{{org.name}}</td>
-          <td>{{org.description}}</td>
-        </tr>
-      </table>
+  <table class="tableContent">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr *ngFor="let org of orgResults">
+      <td>{{ org.name }}</td>
+      <td>{{ org.description }}</td>
+    </tr>
+  </table>
 
-
-
-    <div class="searchOrg">
-        <div (click)="redirect()"><br>New Search</div>
-    </div>
+  <div class="searchOrg">
+    <div (click)="redirect()"><br />New Search</div>
+  </div>
 </div>

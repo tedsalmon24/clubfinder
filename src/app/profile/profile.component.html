@@ -1,43 +1,43 @@
+<!-- PROFILE PAGE-->
+<!-- This page shows the users credentials -->
 <link
   rel="stylesheet"
   href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
 />
-<div class="row"  >
+<div class="row">
   <div class="column">
     <div class="container">
       <h1>John Doe</h1>
       <h4>About Me</h4>
-      <p>{{get_profile.about_me}}</p>
+      <p>{{ get_profile.about_me }}</p>
       <h4>Resources</h4>
-      Github - <a href="https://github.com/tedsalmon24/clubfinder">@ClubFinder</a>
+      Github -
+      <a href="https://github.com/tedsalmon24/clubfinder">@ClubFinder</a>
     </div>
     <div class="center">
       <a routerLink="/settings"><button class="button">Edit Profile</button></a>
     </div>
   </div>
   <div class="column">
-<div class="bio">
-<h1>Bio</h1>
-<td>{{get_profile.bio}}</td>
-<h1>Interests</h1>
-<p>{{get_profile.interests}}</p>
-</div>
-<!--
+    <div class="bio">
+      <h1>Bio</h1>
+      <td>{{ get_profile.bio }}</td>
+      <h1>Interests</h1>
+      <p>{{ get_profile.interests }}</p>
+    </div>
+    <!--
 <div class="personality">
 <h1>My Clubs</h1>
 </div>
 -->
-
   </div>
   <div class="column">
     <div class="goals">
       <h1>Recommended Clubs</h1>
-      </div>
+    </div>
 
-      <!-- <div class="brands">
+    <!-- <div class="brands">
         <h1>My Clubs</h1>
         </div> -->
-
-
   </div>
 </div>
