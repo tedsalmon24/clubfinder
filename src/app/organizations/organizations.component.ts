@@ -23,7 +23,7 @@ export class OrganizationsComponent implements OnInit {
 
   clubs: Club[] = [];
   featuredClubs: Club[]=[];
-  date = new Date('11-30-2022');
+  date = new Date('12-06-2022');
 
   constructor(private http: HttpClient) { }
 
@@ -42,9 +42,9 @@ export class OrganizationsComponent implements OnInit {
     .subscribe((data: any) => {
       this.clubs = data.value;
       console.log(this.clubs);
-      if(numberOfDays%6==0){
+      if(numberOfDays%4==0){
       // the data changes after 6 days, It goes from array 0-9 to 10-9 and so on
-      this.featuredClubs = this.clubs.slice((Math.ceil((numberOfDays)/6)-1)*10,Math.ceil((numberOfDays)/6)*10);
+      this.featuredClubs = this.clubs.slice((Math.ceil((numberOfDays)/4)-1)*10,Math.ceil((numberOfDays)/4)*10);
       }
       console.log(this.featuredClubs);
     });
