@@ -29,7 +29,7 @@
     </tr>
     <tr *ngFor="let org of orgResults">
       <td>{{ org.name }}</td>
-      <td [innerHTML]="org?.Description"></td>
+      <td>{{ org.description }}</td>
     </tr>
   </table>
 
