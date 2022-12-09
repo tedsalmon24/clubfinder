@@ -4,7 +4,7 @@ import {SignInService} from '../services/signin.service';
 
 interface Profile {
 
-  //name:any;
+  name:any;
   about_me:any;
   interests:any;
   bio:any;
@@ -19,7 +19,7 @@ interface Profile {
 
 export class ProfileComponent implements OnInit {
 
-  get_profile: Profile= {about_me: '', bio: '', interests:''};
+  get_profile: Profile= {name:'', about_me: '', bio: '', interests:''};
   token=localStorage.getItem('token')
  
 
